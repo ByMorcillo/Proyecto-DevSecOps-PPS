@@ -39,7 +39,7 @@ jobs:
       # - name: Run PHPUnit tests
         # run: composer run-script test
       - name: Run PHPUnit tests
-        run: vendor/bin/phpunit tests
+        run: composer run-script test
   sonarcloud:
     name: SonarCloud Analysis
     runs-on: ubuntu-20.04
