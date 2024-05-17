@@ -11,4 +11,5 @@ El blog de noticias de ciberseguridad es una plataforma donde se publican artíc
 - Desarrollado con html, js, php.
 - Interfaz de usuario amigable y segura.
 - Seguridad en la gestión de datos y comunicación.
+- Verificadas vulnerabilidades SQL Injection y XSS.
 
