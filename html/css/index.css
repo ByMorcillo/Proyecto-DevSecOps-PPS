@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color: #3586A4 !important;
+  }
+
+  header>nav>a>img {
+    height: 50px;
+    width: 75px;
+  }
+
+  header>nav>div:nth-of-type(1) {
+    margin-right: 0px !important;
+  }
+
+  #navbarNav>ul>li>a {
+    color: white;
+    -webkit-text-stroke-width: 0.1px; /* Ancho del contorno */
+    -webkit-text-stroke-color: #000000; /* Color del contorno */
+  }
+
+  #navbarNav>ul>li>a:hover {
+    color: #14073F;
+  }
+
+  main>div:nth-of-type(1) {
+    background-image: url('../images/background4.jpg');
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  main>div:nth-of-type(1)>div:nth-of-type(1) {
+    height: 100%;
+    width: 100%;
+  }
+
+  #divPrin>h1 {
+    color: #f8f9fa;
+    margin-top: 300px;
+    font-size: 150px;
+  }
+
+  #divPrin>p {
+    color: #f8f9fa;
+    font-size: 50px;
+  }
+
+  main>div:nth-of-type(3)>div:nth-of-type(1)>div:nth-of-type(2)>ul>li {
+    margin-top: 10px;
+  }
+
+  #explanation>h3 {
+    margin-left: 30px;
+    font-size: 80px;
+  }
+
+  #explanation>p {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  #expImg {
+    height: 500px;
+    width: 700px;
+    border-radius: 5px 5px;
+  }
+
+  #divRules {
+    background-color: #160848;
+  }
+
+  #rules>h3 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  #rules>ul {
+    color: white;
+    font-size: 15px;
+  }
+
+  #rulesImg {
+    height: 600px;
+    width: 700px;
+    border-radius: 5px 5px;
+    margin-left: 10px;
+  }
+
+  #divForm>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1) {
+    width: 500px;
+  }
+
+  #btnForm {
+    background-color: #3586A4;
+  }
+
+  #btnForm:hover {
+    background-color: #0069D9 !important;
+  }
+
+  #formImage {
+    height: 500px;
+    width: 700px;
+    border-radius: 5px 5px;
+  }
+
+  footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+
+    body {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+
+    }
+
+    #navbarNav>ul>li>a {
+      text-shadow: black;
+    }
+
+    .content {
+      padding-top: 70px;
+      /* Ajusta el espacio para el navbar fijo */
+    }
+
+    .header-img {
+      display: none;
+    }
+
+    /* Ajustes para el encabezado */
+    header>nav>a>img {
+      height: 30px;
+      width: 45px;
+    }
+
+    main>div:nth-of-type(1)>div:nth-of-type(1) {
+      height: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    main>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1) {
+      padding: 0 !important;
+    }
+
+    #divprin {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0% !important;
+    }
+
+    #divPrin>h1 {
+      font-size: 65px;
+      margin-top: 150px;
+    }
+
+    #divPrin>p {
+      font-size: 30px;
+    }
+
+    /* Ajustes para la explicación de Cyberexp */
+    #explanation>h3 {
+      font-size: 50px;
+    }
+
+    #explanation>p {
+      font-size: 16px;
+    }
+
+    #expImg {
+      height: auto;
+      width: 100%;
+    }
+
+    /* Ajustes para las reglas de la plataforma */
+    #rules>h3 {
+      font-size: 40px;
+    }
+
+    #rules>ul {
+      font-size: 14px;
+    }
+
+    #rulesImg {
+      height: auto;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    /* Ajustes para el formulario de contacto */
+    #divForm>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1) {
+      width: 100%;
+    }
+
+    #formImage {
+      height: auto;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+  }
+
+  @media (min-width: 768px) {
+    .navbar {
+      position: relative;
+    }
+
+  }

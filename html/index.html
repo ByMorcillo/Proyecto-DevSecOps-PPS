@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBEREXP</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/linux_logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">
+        <img src="images/linux_logo.png" alt="Logo" class="header-img">
+      </a>
+      <div class="container">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#divForm">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--Principal Section-->
+    <div>
+      <div class="row text-center">
+        <div class="col-md-6"></div>
+        <div id="divPrin" class="col-md-6">
+          <h1>CYBEREXP</h1>
+          <p class="lead">The most used Cybersecurity Blog</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Section Cyberexp explanation-->
+    <div class="mt-5 mb-5">
+      <div class="row mx-auto">
+        <div id="explanation" class="col-md-6">
+          <h3>What's Cyberexp?</h3>
+          <p>Cyberexp is the world's leading platform
+            where cyber researchers come together to share their latest discoveries, vulnerabilities, detailed analyses
+            (writeups), and much more. Our community is dedicated to fostering knowledge exchange in the field of
+            cybersecurity, providing a unique space where experts and enthusiasts alike can collaborate, learn, and stay
+            updated on the latest trends and threats in the digital landscape. From malware analysis to mitigation
+            techniques, from success stories to lessons learned, Cyberexp is the ultimate destination for anyone
+            passionate about computer security.</p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <img id="expImg" src="images/cyberthreat.webp" alt="Imagen" class="rounded-img">
+        </div>
+      </div>
+    </div>
+
+    <!--Section Rules-->
+    <div id="divRules" class="py-5">
+      <div class="row mx-auto">
+
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <img id="rulesImg" src="images/reglas.avif" alt="Imagen" class="rounded-img">
+        </div>
+
+        <div class="col-md-6" id="rules">
+          <h3>Platform Rules</h3>
+          <ul>
+            <li><strong>Professional Ethics:</strong> All users must commit to acting with integrity and professional
+              ethics in all interactions within the platform, respecting relevant laws and regulations in cybersecurity.
+            </li>
+            <li><strong>Prohibition of Illegal Activities:</strong> Sharing or promoting illegal activities, including
+              but not limited to cyberattacks, unauthorized hacking, malware distribution, theft of confidential
+              information, among others, is strictly prohibited.</li>
+            <li><strong>Reporting Suspicious Activities:</strong> Users are encouraged to immediately report any
+              suspicious or potentially malicious activity they encounter on the platform, so it can be investigated and
+              addressed appropriately by the moderation team.</li>
+            <li><strong>Respect and Tolerance:</strong> All users must treat others with respect and tolerance, avoiding
+              offensive, discriminatory, or harassing behavior in any form.</li>
+            <li><strong>Compliance with Copyright:</strong> Users must strictly respect copyright and intellectual
+              property rights when sharing content on the platform, avoiding infringement of third-party rights.</li>
+            <li><strong>Non-Disclosure of Sensitive Information:</strong> Sharing confidential or sensitive information
+              without prior authorization, including personal data, passwords, or any other type of private information,
+              is prohibited.</li>
+            <li><strong>Cooperation with Authorities:</strong> In case of identifying suspicious or illegal activities,
+              users must fully cooperate with the relevant authorities and provide all necessary information to
+              investigate and resolve the matter.</li>
+            <li><strong>Sanctions for Non-Compliance:</strong> Non-compliance with these ethical and legal rules may
+              result in sanctions ranging from temporary suspension to permanent expulsion from the platform, depending
+              on the severity and frequency of the infringement.</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!--Section Contact Us-->
+    <div class="py-5" id="divForm">
+      <div class="row mx-auto">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <div>
+            <h3>Contact Us</h3>
+            <form id="contactForm" action="#" method="post">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button id="btnForm" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <img id="formImage" src="images/formImage.png" alt="Imagen">
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-dark">
+    <div class="container">
+      <span class="text-muted">© 2024 Cyberexp. All rights reserved.</span>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

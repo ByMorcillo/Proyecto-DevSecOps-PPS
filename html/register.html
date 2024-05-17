@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - CYBEREXP</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/linux_logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">
+        <img src="images/linux_logo.png" alt="Logo" class="header-img">
+      </a>
+      <div class="container">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#divForm">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="login-container">
+    <div class="login-form">
+      <h2 class="text-center mb-4">Join The Best Cybersecurity Platform Worldwide</h2>
+      <form class="">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" required>
+          <span style="font-size: 10px;">At least 8 characters, 1 uppercase, 1 lowercase, 1 number and 1 special character</span>
+        </div>
+        <div class="form-group">
+          <label for="dni">DNI:</label>
+          <input type="text" class="form-control" id="dni" name="dni" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="surname">Surname:</label>
+          <input type="text" class="form-control" id="surname" name="surname" required>
+        </div>
+        <button id="btnForm" type="submit" class="btn btn-primary btn-block">Register</button>
+      </form>
+    </div>
+
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-dark">
+    <div class="container">
+      <span class="text-muted">© 2024 Cyberexp. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/register.js"></script>
+</body>
+
+</html>
