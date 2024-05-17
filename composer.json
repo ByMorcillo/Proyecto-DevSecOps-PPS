@@ -1,5 +1,5 @@
 {
-    "name": "ByMorcillo/Proyecto\-DevSecOps\-PPS",
+    "name": "bymorcillo/proyecto-devsecops-pps",
     "description": "Cyberexp",
     "require": {
         "php": "^8.1",
