@@ -42,7 +42,7 @@ jobs:
         run: vendor/bin/phpunit tests
   sonarcloud:
     name: SonarCloud Analysis
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     needs: run_phpunit_tests
     steps:
       - name: Checkout code
