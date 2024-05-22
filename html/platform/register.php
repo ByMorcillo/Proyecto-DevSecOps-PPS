@@ -3,7 +3,7 @@
 include('conn.php');
 
 // Getting post parameters
-if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['dni']) & !empty($_POST['email']) & !empty($_POST['name']) & !empty($_POST['surname'])) {
+if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['dni']) && !empty($_POST['email']) && !empty($_POST['name']) && !empty($_POST['surname'])) {
 
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
