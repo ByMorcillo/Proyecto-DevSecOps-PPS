@@ -1,54 +1,69 @@
-name: Run PHPUnit Tests
+name: CI_CD
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
 
 jobs:
-  run_phpunit_tests:
-    name: Run PHPUnit Tests
-    runs-on: ubuntu-22.04
+  test:
+    # Instalacion de composer
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v4 # Comprueba el repositorio para asegurar que el workflow puede acceder
 
-      - name: Validate composer.json and composer.lock
-        run: composer validate --strict
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
 
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v2
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v4
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+
+    # Ejecutar Tests con PHPUnit con base al fichero composer.json
+
+    - name: Run test suite
+      run: composer run-script test
+
+  # Analiza la calidad del software mediante PHP Code Sniffer
+  quality_check:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Composer install
+        uses: php-actions/composer@v6
+
+      - name: PHP Code Sniffer
+        uses: php-actions/phpcs@v1
         with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: ${{ runner.os }}-php-
-          
-      - name: Setup PHP with required extensions
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.1.2'
-          extensions: imagick, swoole
-    
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
-
-      - name: Install PHPUnit
-        run: composer require --dev phpunit/phpunit
-
-      # - name: Run PHPUnit tests
-        # run: composer run-script test
-      - name: Run PHPUnit tests
-        run: composer run-script test
+          php_version: 8.2
+          path: html
+          ignore: js,css
+          standard: PSR12
+          name: Build
   sonarcloud:
-    name: SonarCloud Analysis
-    runs-on: ubuntu-20.04
-    needs: run_phpunit_tests
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@main
-        env:
-          SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
-          
+      name: SonarCloud
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+          with:
+            fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+        - name: SonarCloud Scan
+          uses: SonarSource/sonarcloud-github-action@master
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
