@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-include('../platform/functions.php');
+include('../platform/functionsTest.php');
 
 class Functions1Test extends TestCase
 {
