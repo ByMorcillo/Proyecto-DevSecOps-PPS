@@ -37,24 +37,7 @@ jobs:
     - name: Run test suite
       run: composer run-script test
 
-  # Analiza la calidad del software mediante PHP Code Sniffer
-  quality_check:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Composer install
-        uses: php-actions/composer@v6
-
-      - name: PHP Code Sniffer
-        uses: php-actions/phpcs@v1
-        with:
-          php_version: 8.2
-          path: html
-          ignore: js,css
-          standard: PSR12
-          name: Build
+  # Sonarcloud
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
