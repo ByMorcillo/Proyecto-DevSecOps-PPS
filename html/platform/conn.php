@@ -1,8 +1,8 @@
 <?php
-$server = "db";
-$user = "root";
-$password = "root_password";
-$bd = "lamp_db";
+$server = "localhost";
+$user = "id22215888_webuser";
+$password = "Ceti2024#";
+$bd = "id22215888_cyberexp";
 
 try{
     $conn = new PDO("mysql:host=".$server.";dbname=".$bd,$user,$password);
